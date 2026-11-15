@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this replication package, please cite the article as below."
+title: "High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs. Replication package"
+authors:
+  - family-names: Papadogiannis
+    given-names: Agisilaos
+    orcid: "https://orcid.org/0009-0002-7753-7052"
+date-released: 2026-11-15
+version: "1.0"
+license: MIT
+repository-code: "https://github.com/apapadogiannis/covered-call-etfs"
+preferred-citation:
+  type: article
+  title: "High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs"
+  authors:
+    - family-names: Papadogiannis
+      given-names: Agisilaos
+  journal: "The Journal of Beta Investment Strategies"
+  volume: 17
+  issue: 2
+  start: 110
+  end: 123
+  year: 2026
+  url: "https://doi.org/10.2139/ssrn.5370897"

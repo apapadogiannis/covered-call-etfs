@@ -1,0 +1,5 @@
+ticker,fund,index_focus,overlay_method,reset_moneyness,currency,distribution_yield_pct,yield_as_of,tr_1y_nav_pct,tr_as_of
+QYLD,Global X Nasdaq 100 Covered Call ETF,Nasdaq-100,Listed index calls,"Monthly, ATM",USD,10.46,2025-12-19,7.2,2025-09-30
+JEPI,JPMorgan Equity Premium Income ETF,US large-cap,ELNs delivering call exposure,"Short-dated, slightly OTM",USD,8.15,2025-12-19,4.3,2025-09-30
+XYLD,Global X S&P 500 Covered Call ETF,S&P 500,Listed index calls,"Monthly, ATM",USD,9.51,2025-12-19,7.4,2025-09-30
+RYLD,Global X Russell 2000 Covered Call ETF,Russell 2000,Listed index calls,"Monthly, ATM",USD,12.08,2025-12-19,5.0,2025-09-30

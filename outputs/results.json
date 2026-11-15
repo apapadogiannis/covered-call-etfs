@@ -1,0 +1,142 @@
+{
+  "exhibit1_nav_profile": {
+    "strike": 110.0,
+    "premium": 5.0,
+    "nav_cap": 115.0,
+    "equity_only_nav": {
+      "80": 80.0,
+      "100": 100.0,
+      "110": 110.0,
+      "120": 120.0,
+      "140": 140.0
+    },
+    "covered_call_nav": {
+      "80": 85.0,
+      "100": 105.0,
+      "110": 115.0,
+      "120": 115.0,
+      "140": 115.0
+    }
+  },
+  "exhibit5_us_funds": {
+    "currency": "USD",
+    "distribution_yield_as_of": "2025-12-19",
+    "total_return_as_of": "2025-09-30",
+    "funds": [
+      {
+        "ticker": "QYLD",
+        "index_focus": "Nasdaq-100",
+        "overlay_method": "Listed index calls",
+        "reset_moneyness": "Monthly, ATM",
+        "distribution_yield_pct": 10.46,
+        "tr_1y_nav_pct": 7.2
+      },
+      {
+        "ticker": "JEPI",
+        "index_focus": "US large-cap",
+        "overlay_method": "ELNs delivering call exposure",
+        "reset_moneyness": "Short-dated, slightly OTM",
+        "distribution_yield_pct": 8.15,
+        "tr_1y_nav_pct": 4.3
+      },
+      {
+        "ticker": "XYLD",
+        "index_focus": "S&P 500",
+        "overlay_method": "Listed index calls",
+        "reset_moneyness": "Monthly, ATM",
+        "distribution_yield_pct": 9.51,
+        "tr_1y_nav_pct": 7.4
+      },
+      {
+        "ticker": "RYLD",
+        "index_focus": "Russell 2000",
+        "overlay_method": "Listed index calls",
+        "reset_moneyness": "Monthly, ATM",
+        "distribution_yield_pct": 12.08,
+        "tr_1y_nav_pct": 5.0
+      }
+    ]
+  },
+  "exhibit6_ucits_funds": {
+    "currency": "EUR",
+    "as_of": "2025-11",
+    "funds": [
+      {
+        "ticker": "JEPG",
+        "isin": "IE0003UVYC20",
+        "index_focus": "Global large-cap",
+        "overlay_method": "ELN/options overlay (active)",
+        "reset_moneyness": "Short-dated, typically OTM",
+        "distribution_yield_pct": 8.36,
+        "tr_1y_nav_pct": -1.8
+      },
+      {
+        "ticker": "JEPQ",
+        "isin": "IE000U9J8HX9",
+        "index_focus": "Nasdaq-oriented",
+        "overlay_method": "ELN/options overlay (active)",
+        "reset_moneyness": "Short-dated, typically OTM",
+        "distribution_yield_pct": 10.34,
+        "tr_1y_nav_pct": 13.45
+      },
+      {
+        "ticker": "JEPI",
+        "isin": "IE000U5MJOZ6",
+        "index_focus": "US large-cap",
+        "overlay_method": "ELN/options overlay (active)",
+        "reset_moneyness": "Short-dated, typically OTM",
+        "distribution_yield_pct": 6.89,
+        "tr_1y_nav_pct": -4.6
+      },
+      {
+        "ticker": "QYLD UCITS",
+        "isin": "IE00BM8R0J59",
+        "index_focus": "Nasdaq-100",
+        "overlay_method": "Listed index calls (passive)",
+        "reset_moneyness": "Monthly, ATM",
+        "distribution_yield_pct": 12.18,
+        "tr_1y_nav_pct": -0.31
+      }
+    ]
+  },
+  "exhibitA1_payoffs": {
+    "panel_a": {
+      "strike": 100.0,
+      "premium": 10.0,
+      "breakeven": 110.0,
+      "long_call_profit": {
+        "50": -10.0,
+        "100": -10.0,
+        "110": 0.0,
+        "150": 40.0
+      },
+      "short_call_profit": {
+        "50": 10.0,
+        "100": 10.0,
+        "110": 0.0,
+        "150": -40.0
+      }
+    },
+    "panel_b": {
+      "purchase_price": 100.0,
+      "strike": 110.0,
+      "premium": 5.0,
+      "breakeven": 95.0,
+      "max_profit": 15.0,
+      "long_stock_profit": {
+        "50": -50.0,
+        "95": -5.0,
+        "100": 0.0,
+        "110": 10.0,
+        "150": 50.0
+      },
+      "covered_call_profit": {
+        "50": -45.0,
+        "95": 0.0,
+        "100": 5.0,
+        "110": 15.0,
+        "150": 15.0
+      }
+    }
+  }
+}

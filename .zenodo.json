@@ -1,0 +1,25 @@
+{
+  "title": "High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs: replication package",
+  "upload_type": "software",
+  "description": "Replication package for the article published in The Journal of Beta Investment Strategies, 17(2), Summer 2026, pp. 110-123. Code and data that reproduce the article's payoff illustrations (NAV profile of a covered-call position at expiration; long call, short call and covered-call profit diagrams) and its two fund tables: trailing distribution yield and one-year NAV total return of four US-listed and four UCITS covered-call ETFs. The article text is copyright PMR and is not included. Third-party input data remain the property of their sources and are included for replication only; the code is MIT-licensed.",
+  "creators": [
+    {
+      "name": "Papadogiannis, Agisilaos",
+      "orcid": "0009-0002-7753-7052"
+    }
+  ],
+  "keywords": ["covered-call ETFs", "buy-write", "option overlay", "distribution yield", "total return", "return of capital", "UCITS", "income investing"],
+  "license": "MIT",
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/apapadogiannis/covered-call-etfs",
+      "scheme": "url"
+    },
+    {
+      "relation": "isSupplementTo",
+      "identifier": "10.2139/ssrn.5370897",
+      "scheme": "doi"
+    }
+  ]
+}

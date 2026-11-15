@@ -1,0 +1,30 @@
+name: replication
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  replicate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-lock.txt
+
+      - name: Regenerate the exhibits
+        run: ./run_all.sh
+
+      - name: Verify results match the committed ones
+        run: |
+          git diff --exit-code --stat -- outputs/results.json
+          echo "All results reproduce."

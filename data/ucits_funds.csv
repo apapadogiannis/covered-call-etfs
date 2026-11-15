@@ -1,0 +1,5 @@
+ticker,fund,isin,index_focus,overlay_method,reset_moneyness,currency,distribution_yield_pct,tr_1y_nav_pct,as_of
+JEPG,JPMorgan Global Equity Premium Income Active UCITS ETF,IE0003UVYC20,Global large-cap,ELN/options overlay (active),"Short-dated, typically OTM",EUR,8.36,-1.80,2025-11
+JEPQ,JPMorgan Nasdaq Equity Premium Income Active UCITS ETF,IE000U9J8HX9,Nasdaq-oriented,ELN/options overlay (active),"Short-dated, typically OTM",EUR,10.34,13.45,2025-11
+JEPI,JPMorgan US Equity Premium Income Active UCITS ETF,IE000U5MJOZ6,US large-cap,ELN/options overlay (active),"Short-dated, typically OTM",EUR,6.89,-4.60,2025-11
+QYLD UCITS,Global X Nasdaq 100 Covered Call UCITS ETF,IE00BM8R0J59,Nasdaq-100,Listed index calls (passive),"Monthly, ATM",EUR,12.18,-0.31,2025-11
