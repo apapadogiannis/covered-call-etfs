@@ -52,7 +52,7 @@ pip install -r requirements.txt
 The scripts are deterministic. Re-running them reproduces `outputs/results.json` and
 writes the LaTeX table bodies (`outputs/exhibit5.tex`, `outputs/exhibit6.tex`) and the two
 figures (`figures/`), which are generated locally and not tracked. A GitHub Actions
-workflow re-runs the pipeline on every push and fails if `results.json` differs from the
+workflow re-runs the pipeline on every push and once a month and fails if `results.json` differs from the
 committed file.
 
 | Script | What it produces | Where it appears |
@@ -70,6 +70,26 @@ The keys of `outputs/results.json` are named after the exhibits (`exhibit1_nav_p
 its quantitative content is the two payoff illustrations and the two fund snapshots. The
 snapshots are point-in-time figures read from the sources on the dates stated in
 `data/README.md`; they are stored here because the sources show only current values.
+
+## How the check works
+
+1. `outputs/results.json` is stored in this repository exactly as it was when the
+   article's numbers were taken from it.
+2. `./run_all.sh` reruns every script on the files in `data/` and overwrites that file with
+   a freshly computed one.
+3. `git diff --exit-code -- outputs/results.json` then compares the fresh file with the
+   stored version, character by character. If nothing is printed, it is identical; any
+   difference is listed and counts as a failure.
+
+The workflow behind the badge does exactly these three steps on a new machine with the pinned
+package versions, on every push and once a month, so a green badge means the stored
+file still follows from the data and code. The stored file is also frozen in the Zenodo
+archive, which cannot be altered after release.
+
+Two limits. The comparison is between the regenerated and the stored file, not with the article's
+PDF: to connect the two, use the script table above, which says where each output appears in
+the article. And the figures and LaTeX table bodies are written locally from the same values but are
+not stored here, so they are not part of the comparison.
 
 ## Data and licensing
 
