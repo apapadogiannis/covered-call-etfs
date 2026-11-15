@@ -1,10 +1,12 @@
 # High Yield, Capped Gains: Mechanics, Trade-Offs, and Practical Diagnostics for Covered-Call ETFs
 
+[![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.24244700-007ec6)](https://doi.org/10.5281/zenodo.24244700)
 [![SSRN](https://img.shields.io/badge/SSRN-10.2139%2Fssrn.5370897-1f4e79)](https://doi.org/10.2139/ssrn.5370897)
 [![replication](https://github.com/apapadogiannis/covered-call-etfs/actions/workflows/replicate.yml/badge.svg)](https://github.com/apapadogiannis/covered-call-etfs/actions/workflows/replicate.yml)
 
 Replication package for the article by Agisilaos Papadogiannis, published in *The Journal of Beta Investment Strategies*, 17(2), Summer 2026, pp. 110-123.
 Title and abstract: `paper/abstract.pdf`; also on SSRN: [doi:10.2139/ssrn.5370897](https://doi.org/10.2139/ssrn.5370897).
+Archived on Zenodo: [doi:10.5281/zenodo.24244700](https://doi.org/10.5281/zenodo.24244700) (v1.0).
 Published article: [The Journal of Beta Investment Strategies, Volume 17, Issue 2](https://www.pm-research.com/content/iijindinv/17/2).
 The article is copyright PMR and its text is not distributed here; this repository holds the code and the data behind its payoff figures and fund tables, so that every reported number can be reproduced.
 
@@ -87,6 +89,11 @@ Code: MIT License. `outputs/results.json`: CC BY 4.0, cite the article.
 > Papadogiannis, A. (2026). "High yield, capped gains: Mechanics, trade-offs, and practical
 > diagnostics for covered-call ETFs." *The Journal of Beta Investment Strategies*, 17(2), 110-123.
 > SSRN: https://doi.org/10.2139/ssrn.5370897
+
+Code and data:
+
+> Papadogiannis, A. (2026). "High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs. Replication package." Zenodo.
+> https://doi.org/10.5281/zenodo.24244700
 
 ## Disclaimer
 
