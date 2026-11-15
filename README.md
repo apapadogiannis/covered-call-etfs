@@ -7,7 +7,7 @@
 Replication package for the article by Agisilaos Papadogiannis, published in *The Journal of Beta Investment Strategies*, 17(2), Summer 2026, pp. 110-123.
 Title and abstract: `paper/abstract.pdf`; also on SSRN: [doi:10.2139/ssrn.5370897](https://doi.org/10.2139/ssrn.5370897).
 Archived on Zenodo: [doi:10.5281/zenodo.24244700](https://doi.org/10.5281/zenodo.24244700) (v1.0).
-Published article: [The Journal of Beta Investment Strategies, Volume 17, Issue 2](https://www.pm-research.com/content/iijindinv/17/2).
+Published article: [doi:10.3905/jbis.2026.001](https://doi.org/10.3905/jbis.2026.001).
 The article is copyright PMR and its text is not distributed here; this repository holds the code and the data behind its payoff figures and fund tables, so that every reported number can be reproduced.
 
 ## What this is
@@ -88,6 +88,7 @@ Code: MIT License. `outputs/results.json`: CC BY 4.0, cite the article.
 
 > Papadogiannis, A. (2026). "High yield, capped gains: Mechanics, trade-offs, and practical
 > diagnostics for covered-call ETFs." *The Journal of Beta Investment Strategies*, 17(2), 110-123.
+> https://doi.org/10.3905/jbis.2026.001
 > SSRN: https://doi.org/10.2139/ssrn.5370897
 
 Code and data:

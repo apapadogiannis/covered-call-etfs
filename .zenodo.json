@@ -18,6 +18,11 @@
     },
     {
       "relation": "isSupplementTo",
+      "identifier": "10.3905/jbis.2026.001",
+      "scheme": "doi"
+    },
+    {
+      "relation": "isSupplementTo",
       "identifier": "10.2139/ssrn.5370897",
       "scheme": "doi"
     }
