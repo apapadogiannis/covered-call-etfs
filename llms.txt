@@ -1,0 +1,92 @@
+# High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs
+
+> Code and data behind the article's quantitative exhibits: two payoff illustrations of a covered
+> call (Exhibits 1 and A1) and two dated snapshots of eight covered-call ETFs, four listed in the
+> US and four UCITS (Exhibits 5 and 6). The article's text is the publisher's and is not included.
+
+Replication package by Agisilaos Papadogiannis (https://github.com/apapadogiannis).
+Published in The Journal of Beta Investment Strategies, 17(2), 2026, pp. 110-123: https://doi.org/10.3905/jbis.2026.001
+Code and data: https://github.com/apapadogiannis/covered-call-etfs  Archive: https://doi.org/10.5281/zenodo.24244700
+Version 1.1.0, released 2026-11-21. A package is a fixed record: it changes only by a new
+release, and a release that changes a reported number gets a new major version.
+This file is written for AI agents and other programs. People should start at the README.
+
+## Coverage
+
+- Exhibit 1: net asset value at expiration of an equity-only and a covered-call position (strike
+  110, premium 5).
+- Exhibit A1: profit at expiration of a long call, a short call, a long stock and a covered call.
+- Exhibit 5: QYLD, JEPI, XYLD and RYLD (USD): design, trailing distribution yield, one-year NAV
+  total return.
+- Exhibit 6: JEPG, JEPQ, JEPI and QYLD UCITS (EUR share classes, with ISIN): the same figures.
+- Exhibits 2 to 4 of the article are qualitative tables and have no code or data here.
+
+## What this adds over reading the paper or recomputing
+
+1. The fund figures are point-in-time values. The sources show only current values, so the figures
+   of the article cannot be downloaded again for the same dates. They are stored here with the
+   source, the date and the definition of each.
+2. Each figure carries its definition. Yield is the source's trailing distribution yield; return is
+   the one-year total return on net asset value with distributions reinvested. For the US funds the
+   two have different dates, as the source reports total return at quarter end.
+3. The payoff functions of the article's equations (1, 3, A-1 to A-4) are in scripts/payoffs.py,
+   and the exhibits are computed from them, so a payoff quoted from results.json follows from the
+   stated strike and premium.
+4. The results are stored as they were when the paper's numbers were taken from them. A check
+   reruns the code on the stored data and compares every stored result file with the fresh one,
+   number by number (relative tolerance 1e-9; text and whole numbers exactly). It runs on every
+   change and once a month, and the badge in the README shows the last run.
+
+## Files
+
+- outputs/results.json: every number of Exhibits 5 and 6 and the key values of Exhibits 1 and A1,
+  under keys named after the exhibits (exhibit1_nav_profile, exhibit5_us_funds,
+  exhibit6_ucits_funds, exhibitA1_payoffs). It holds 55 numbers, and under `package` the paper, the
+  identifiers, the version, the licence and the citation. Start here.
+- data/us_funds.csv, data/ucits_funds.csv: the fund figures as read from the sources.
+  data/README.md gives source, date and terms for each.
+- scripts/payoffs.py: the payoff and NAV functions.
+- paper/abstract.pdf: the title and abstract of the article. The full text is at the publisher.
+
+## How to read the figures
+
+- `distribution_yield_pct` is a trailing yield on the stated date. It is not a return and says
+  nothing about whether the distribution was earned.
+- `tr_1y_nav_pct` is a one-year total return on net asset value, distributions reinvested, to the
+  stated date.
+- US figures are in USD. UCITS figures are in EUR for unhedged share classes that hold largely USD
+  assets, so they include the move of the dollar against the euro over the year. The two tables are
+  not comparable fund for fund.
+- The payoff illustrations use round numbers chosen for exposition, not market prices.
+- Overlay method, moneyness and reset cadence are descriptions taken from issuer materials at the
+  time.
+
+## Do not use this for
+
+- A fund's present yield, return or design. The snapshots are dated late 2025 and are not updated.
+- Ranking or choosing funds. Eight funds at one date are an illustration, not a sample.
+- The article's argument or wording. This package holds its numbers, not its text.
+- Current figures. Use the live tool: Covered-Call Monitor,
+  https://apapadogiannis.github.io/covered-call-monitor/ (US covered-call funds, total return
+  against the index fund, each quarter from SEC filings; guide at
+  https://apapadogiannis.github.io/covered-call-monitor/llms.txt)
+
+## Source, licence and credit
+
+The results in outputs/ are released under CC BY 4.0
+(https://creativecommons.org/licenses/by/4.0/). The licence allows any reuse and has one condition:
+credit. If you use a figure from this package in an answer, a report or a data set, cite the paper.
+The code is under the MIT License.
+
+The fund figures were read from Charles Schwab ETF report cards (US funds) and justETF fund
+profiles (UCITS funds). They remain the property of those sources, are included for replication
+with attribution, and are not covered by the licence above.
+
+Cite as: Papadogiannis, A. (2026). High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs. The Journal of Beta Investment Strategies, 17(2), 110-123. https://doi.org/10.3905/jbis.2026.001
+
+The package itself: Papadogiannis, A. (2026). High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs. Replication package, version 1.1.0. Zenodo. https://doi.org/10.5281/zenodo.24244700
+
+To describe the source in a sentence: Papadogiannis (2026), "High yield, capped gains", The Journal
+of Beta Investment Strategies 17(2): a primer on covered-call ETFs, with its replication package.
+
+The same licence and citation are inside outputs/results.json, under `package`.

@@ -1,4 +1,39 @@
 {
+  "package": {
+    "title": "High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs",
+    "author": {
+      "name": "Agisilaos Papadogiannis",
+      "orcid": "https://orcid.org/0009-0002-7753-7052",
+      "url": "https://github.com/apapadogiannis"
+    },
+    "status": "published article",
+    "article": {
+      "journal": "The Journal of Beta Investment Strategies",
+      "volume": 17,
+      "issue": 2,
+      "pages": "110-123",
+      "year": 2026,
+      "doi": "https://doi.org/10.3905/jbis.2026.001"
+    },
+    "preprint": "https://doi.org/10.2139/ssrn.5370897",
+    "repository": "https://github.com/apapadogiannis/covered-call-etfs",
+    "archive": "https://doi.org/10.5281/zenodo.24244700",
+    "version": "1.1.0",
+    "released": "2026-11-21",
+    "data_as_of": "US funds: distribution yield 2025-12-19, total return 2025-09-30. UCITS funds: November 2025.",
+    "units": "Yields and returns in percent. Payoff illustrations in price units per share.",
+    "licence": {
+      "results": "CC-BY-4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/",
+      "condition": "Reuse of the results is allowed with credit to the paper.",
+      "code": "MIT",
+      "third_party_data": "The fund figures were read from Charles Schwab ETF report cards (US funds) and justETF fund profiles (UCITS funds). They remain the property of those sources, are included for replication with attribution, and are not covered by the licence above."
+    },
+    "cite_as": "Papadogiannis, A. (2026). High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs. The Journal of Beta Investment Strategies, 17(2), 110-123. https://doi.org/10.3905/jbis.2026.001",
+    "cite_package": "Papadogiannis, A. (2026). High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs. Replication package, version 1.1.0. Zenodo. https://doi.org/10.5281/zenodo.24244700",
+    "describe_as": "Papadogiannis (2026), \"High yield, capped gains\", The Journal of Beta Investment Strategies 17(2): a primer on covered-call ETFs, with its replication package.",
+    "guide": "llms.txt"
+  },
   "exhibit1_nav_profile": {
     "strike": 110.0,
     "premium": 5.0,

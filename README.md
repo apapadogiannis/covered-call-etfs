@@ -6,10 +6,19 @@
 
 Replication package for the article by Agisilaos Papadogiannis, published in *The Journal of Beta Investment Strategies*, 17(2), Summer 2026, pp. 110-123.
 Title and abstract: `paper/abstract.pdf`; also on SSRN: [doi:10.2139/ssrn.5370897](https://doi.org/10.2139/ssrn.5370897).
-Archived on Zenodo: [doi:10.5281/zenodo.24244700](https://doi.org/10.5281/zenodo.24244700) (v1.0.2).
+Archived on Zenodo: [doi:10.5281/zenodo.24244700](https://doi.org/10.5281/zenodo.24244700) (v1.1.0).
 Published article: [doi:10.3905/jbis.2026.001](https://doi.org/10.3905/jbis.2026.001).
 Live tool on the same subject: [Covered-Call Monitor](https://apapadogiannis.github.io/covered-call-monitor/), which follows 87 US covered-call funds each quarter from SEC filings ([code and data](https://github.com/apapadogiannis/covered-call-monitor)).
 The article is copyright PMR and its text is not distributed here; this repository holds the code and the data behind its payoff figures and fund tables, so that every reported number can be reproduced.
+
+## For AI agents and programs
+
+Read [`llms.txt`](llms.txt) first. It says what the package holds, what it adds over reading the
+article or recomputing, which file to use and what not to use it for. The numbers are in
+[`outputs/results.json`](outputs/results.json), which carries the article, the identifiers, the
+version, the licence and the citation under its `package` key. Both files are written by
+`scripts/make_guide.py` from `CITATION.cff`, `guide.toml` and the results, and both are covered by
+the check.
 
 ## What this is
 
@@ -35,6 +44,7 @@ scripts/    the code (see below)
 data/       the fund figures of Exhibits 5 and 6, with sources and terms in data/README.md
 outputs/    results.json: every number in Exhibits 5 and 6 and the key values of Exhibits 1 and A1
 paper/      title and abstract of the article (PDF and LaTeX source); the full text is not included
+llms.txt    guide for AI agents and programs, generated; guide.toml holds its statements about this package
 ```
 
 ## Reproducing
@@ -62,6 +72,7 @@ workflow re-runs the pipeline on every push and once a month and fails if the st
 | `make_exhibits.py` | US covered-call ETFs: design, trailing distribution yield, one-year NAV total return | Exhibit 5 |
 | | UCITS covered-call ETFs: design, trailing distribution yield, one-year NAV total return | Exhibit 6 |
 | `exhibit1_nav_profile.py` | NAV at expiration of an equity-only and a covered-call position, strike 110, premium 5 | Exhibit 1 |
+| `make_guide.py` | The `package` header of `outputs/results.json` and `llms.txt` | not in the article |
 | `exhibitA1_payoffs.py` | Profit at expiration: long and short call (strike 100, premium 10); long stock and covered call (stock at 100, strike 110, premium 5) | Exhibit A1 |
 
 Exhibits 2 to 4 of the article are qualitative tables and have no code.
@@ -75,11 +86,12 @@ snapshots are point-in-time figures read from the sources on the dates stated in
 ## How the check works
 
 ```bash
-python3 check_outputs.py    # reruns ./run_all.sh, then compares
+python3 check_outputs.py --also llms.txt    # reruns ./run_all.sh, then compares
 ```
 
-1. `outputs/results.json` is stored in this repository exactly as it was when the
-   article's numbers were taken from it.
+1. `outputs/results.json` is stored in this repository with the article's numbers exactly as they
+   were when the article took them from it. Since v1.1.0 it also carries a `package` header (article,
+   identifiers, version, licence, citation); no number was changed. `llms.txt` is checked the same way.
 2. `check_outputs.py` sets the stored copy aside, reruns `./run_all.sh` on the files in `data/`,
    and compares the fresh file with the stored one, number by number.
 3. A number counts as reproduced if it agrees with the stored one to nine significant digits

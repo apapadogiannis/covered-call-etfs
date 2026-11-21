@@ -1,0 +1,46 @@
+# The statements of llms.txt and of the header of outputs/results.json that are specific to this
+# package. scripts/make_guide.py combines them with CITATION.cff and the results. No number of the
+# article is written here.
+
+ssrn = "10.2139/ssrn.5370897"
+data_as_of = "US funds: distribution yield 2025-12-19, total return 2025-09-30. UCITS funds: November 2025."
+units = "Yields and returns in percent. Payoff illustrations in price units per share."
+describe_as = "Papadogiannis (2026), \"High yield, capped gains\", The Journal of Beta Investment Strategies 17(2): a primer on covered-call ETFs, with its replication package."
+what = "Code and data behind the article's quantitative exhibits: two payoff illustrations of a covered call (Exhibits 1 and A1) and two dated snapshots of eight covered-call ETFs, four listed in the US and four UCITS (Exhibits 5 and 6). The article's text is the publisher's and is not included."
+third_party = "The fund figures were read from Charles Schwab ETF report cards (US funds) and justETF fund profiles (UCITS funds). They remain the property of those sources, are included for replication with attribution, and are not covered by the licence above."
+results_file = "every number of Exhibits 5 and 6 and the key values of Exhibits 1 and A1, under keys named after the exhibits (exhibit1_nav_profile, exhibit5_us_funds, exhibit6_ucits_funds, exhibitA1_payoffs)."
+
+coverage = [
+  "Exhibit 1: net asset value at expiration of an equity-only and a covered-call position (strike 110, premium 5).",
+  "Exhibit A1: profit at expiration of a long call, a short call, a long stock and a covered call.",
+  "Exhibit 5: QYLD, JEPI, XYLD and RYLD (USD): design, trailing distribution yield, one-year NAV total return.",
+  "Exhibit 6: JEPG, JEPQ, JEPI and QYLD UCITS (EUR share classes, with ISIN): the same figures.",
+  "Exhibits 2 to 4 of the article are qualitative tables and have no code or data here.",
+]
+adds = [
+  "The fund figures are point-in-time values. The sources show only current values, so the figures of the article cannot be downloaded again for the same dates. They are stored here with the source, the date and the definition of each.",
+  "Each figure carries its definition. Yield is the source's trailing distribution yield; return is the one-year total return on net asset value with distributions reinvested. For the US funds the two have different dates, as the source reports total return at quarter end.",
+  "The payoff functions of the article's equations (1, 3, A-1 to A-4) are in scripts/payoffs.py, and the exhibits are computed from them, so a payoff quoted from results.json follows from the stated strike and premium.",
+]
+files = [
+  "data/us_funds.csv, data/ucits_funds.csv: the fund figures as read from the sources. data/README.md gives source, date and terms for each.",
+  "scripts/payoffs.py: the payoff and NAV functions.",
+  "paper/abstract.pdf: the title and abstract of the article. The full text is at the publisher.",
+]
+read = [
+  "`distribution_yield_pct` is a trailing yield on the stated date. It is not a return and says nothing about whether the distribution was earned.",
+  "`tr_1y_nav_pct` is a one-year total return on net asset value, distributions reinvested, to the stated date.",
+  "US figures are in USD. UCITS figures are in EUR for unhedged share classes that hold largely USD assets, so they include the move of the dollar against the euro over the year. The two tables are not comparable fund for fund.",
+  "The payoff illustrations use round numbers chosen for exposition, not market prices.",
+  "Overlay method, moneyness and reset cadence are descriptions taken from issuer materials at the time.",
+]
+not_for = [
+  "A fund's present yield, return or design. The snapshots are dated late 2025 and are not updated.",
+  "Ranking or choosing funds. Eight funds at one date are an illustration, not a sample.",
+  "The article's argument or wording. This package holds its numbers, not its text.",
+]
+
+[live_tool]
+name = "Covered-Call Monitor"
+url = "https://apapadogiannis.github.io/covered-call-monitor/"
+what = "US covered-call funds, total return against the index fund, each quarter from SEC filings; guide at https://apapadogiannis.github.io/covered-call-monitor/llms.txt"

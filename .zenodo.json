@@ -8,7 +8,16 @@
       "orcid": "0009-0002-7753-7052"
     }
   ],
-  "keywords": ["covered-call ETFs", "buy-write", "option overlay", "distribution yield", "total return", "return of capital", "UCITS", "income investing"],
+  "keywords": [
+    "covered-call ETFs",
+    "buy-write",
+    "option overlay",
+    "distribution yield",
+    "total return",
+    "return of capital",
+    "UCITS",
+    "income investing"
+  ],
   "license": "MIT",
   "related_identifiers": [
     {
@@ -26,5 +35,6 @@
       "identifier": "10.2139/ssrn.5370897",
       "scheme": "doi"
     }
-  ]
+  ],
+  "version": "1.1.0"
 }
