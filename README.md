@@ -8,6 +8,7 @@ Replication package for the article by Agisilaos Papadogiannis, published in *Th
 Title and abstract: `paper/abstract.pdf`; also on SSRN: [doi:10.2139/ssrn.5370897](https://doi.org/10.2139/ssrn.5370897).
 Archived on Zenodo: [doi:10.5281/zenodo.24244700](https://doi.org/10.5281/zenodo.24244700) (v1.0.2).
 Published article: [doi:10.3905/jbis.2026.001](https://doi.org/10.3905/jbis.2026.001).
+Live tool on the same subject: [Covered-Call Monitor](https://apapadogiannis.github.io/covered-call-monitor/), which follows 87 US covered-call funds each quarter from SEC filings ([code and data](https://github.com/apapadogiannis/covered-call-monitor)).
 The article is copyright PMR and its text is not distributed here; this repository holds the code and the data behind its payoff figures and fund tables, so that every reported number can be reproduced.
 
 ## What this is
