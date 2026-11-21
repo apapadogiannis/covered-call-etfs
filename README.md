@@ -6,7 +6,7 @@
 
 Replication package for the article by Agisilaos Papadogiannis, published in *The Journal of Beta Investment Strategies*, 17(2), Summer 2026, pp. 110-123.
 Title and abstract: `paper/abstract.pdf`; also on SSRN: [doi:10.2139/ssrn.5370897](https://doi.org/10.2139/ssrn.5370897).
-Archived on Zenodo: [doi:10.5281/zenodo.24244700](https://doi.org/10.5281/zenodo.24244700) (v1.1).
+Archived on Zenodo: [doi:10.5281/zenodo.24244700](https://doi.org/10.5281/zenodo.24244700) (v1.0.2).
 Published article: [doi:10.3905/jbis.2026.001](https://doi.org/10.3905/jbis.2026.001).
 The article is copyright PMR and its text is not distributed here; this repository holds the code and the data behind its payoff figures and fund tables, so that every reported number can be reproduced.
 
