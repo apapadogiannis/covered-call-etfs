@@ -51,6 +51,20 @@ def numbers(x):
     return 0
 
 
+def checks(results):
+    """For each list of checks in the results: how many claims, and how many agree with the paper."""
+    lines = []
+    for key, rows in results.items():
+        if not key.endswith("_checks"):
+            continue
+        ok = sum(abs(r["computed"] - r["paper"]) <= r["tolerance"] if "tolerance" in r
+                 else str(r["computed"]) == str(r["paper"]) for r in rows)
+        how = "within the stated tolerance" if "tolerance" in rows[0] else "exactly"
+        lines.append(f"`{key}`: {len(rows):,} numbers quoted in the paper, recomputed from the data and compared with the "
+                     f"paper's figure; {ok:,} agree {how}. The run fails if any does not.")
+    return lines
+
+
 def wrap(text, width=100, first="", rest=""):
     lines, line = [], first
     for word in text.split():
@@ -109,7 +123,7 @@ def main():
     step = lambda i, t: wrap(t, first=f"{i}. ", rest="   ")
     status = (f"Published in {paper['journal']}, {paper['volume']}({paper['issue']}), {paper['year']}, pp. {pages}: {paper['url']}"
               if published else f"Working paper: https://doi.org/{g['ssrn']}")
-    adds = list(g["adds"]) + [
+    adds = list(g["adds"]) + checks(results) + [
         f"The results are stored as they were when the paper's numbers were taken from them. A check "
         f"reruns the code on the stored data and compares every stored result file with the fresh one, "
         f"number by number (relative tolerance {tolerance}; text and whole numbers exactly). It runs on "
