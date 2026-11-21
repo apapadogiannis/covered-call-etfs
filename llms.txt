@@ -7,7 +7,7 @@
 Replication package by Agisilaos Papadogiannis (https://github.com/apapadogiannis).
 Published in The Journal of Beta Investment Strategies, 17(2), 2026, pp. 110-123: https://doi.org/10.3905/jbis.2026.001
 Code and data: https://github.com/apapadogiannis/covered-call-etfs  Archive: https://doi.org/10.5281/zenodo.24244700
-Version 1.1.1, released 2026-11-21. A package is a fixed record: it changes only by a new
+Version 1.1.2, released 2026-11-21. A package is a fixed record: it changes only by a new
 release, and a release that changes a reported number gets a new major version.
 This file is written for AI agents and other programs. People should start at the README.
 
@@ -94,7 +94,7 @@ with attribution, and are not covered by the licence above.
 
 Cite as: Papadogiannis, A. (2026). High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs. The Journal of Beta Investment Strategies, 17(2), 110-123. https://doi.org/10.3905/jbis.2026.001
 
-The package itself: Papadogiannis, A. (2026). High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs. Replication package, version 1.1.1. Zenodo. https://doi.org/10.5281/zenodo.24244700
+The package itself: Papadogiannis, A. (2026). High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs. Replication package, version 1.1.2. Zenodo. https://doi.org/10.5281/zenodo.24244700
 
 To describe the source in a sentence: Papadogiannis (2026), "High yield, capped gains", The Journal
 of Beta Investment Strategies 17(2): a primer on covered-call ETFs, with its replication package.
