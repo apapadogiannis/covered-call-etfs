@@ -7,7 +7,7 @@
 Replication package by Agisilaos Papadogiannis (https://github.com/apapadogiannis).
 Published in The Journal of Beta Investment Strategies, 17(2), 2026, pp. 110-123: https://doi.org/10.3905/jbis.2026.001
 Code and data: https://github.com/apapadogiannis/covered-call-etfs  Archive: https://doi.org/10.5281/zenodo.24244700
-Version 1.1.0, released 2026-11-21. A package is a fixed record: it changes only by a new
+Version 1.1.1, released 2026-11-21. A package is a fixed record: it changes only by a new
 release, and a release that changes a reported number gets a new major version.
 This file is written for AI agents and other programs. People should start at the README.
 
@@ -48,8 +48,18 @@ This file is written for AI agents and other programs. People should start at th
 - scripts/payoffs.py: the payoff and NAV functions.
 - paper/abstract.pdf: the title and abstract of the article. The full text is at the publisher.
 
+Raw files: https://raw.githubusercontent.com/apapadogiannis/covered-call-etfs/main/<path>, for example https://raw.githubusercontent.com/apapadogiannis/covered-call-etfs/main/outputs/results.json
+
 ## How to read the figures
 
+- For the maximum profit and the breakeven of a covered call use `exhibitA1_payoffs.panel_b` (stock
+  bought at 100, strike 110, premium 5). `panel_a` is a single call, long and short, and its
+  `breakeven` is the call's. `exhibit1_nav_profile` gives net asset value at expiration, not
+  profit.
+- The ticker JEPI appears in both fund tables: the US fund in `exhibit5_us_funds` and the UCITS
+  fund, a different fund, in `exhibit6_ucits_funds`. UCITS rows carry an ISIN. Fund names are in
+  data/us_funds.csv and data/ucits_funds.csv.
+- The UCITS figures are dated by month only (November 2025), as the source gave them.
 - `distribution_yield_pct` is a trailing yield on the stated date. It is not a return and says
   nothing about whether the distribution was earned.
 - `tr_1y_nav_pct` is a one-year total return on net asset value, distributions reinvested, to the
@@ -84,7 +94,7 @@ with attribution, and are not covered by the licence above.
 
 Cite as: Papadogiannis, A. (2026). High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs. The Journal of Beta Investment Strategies, 17(2), 110-123. https://doi.org/10.3905/jbis.2026.001
 
-The package itself: Papadogiannis, A. (2026). High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs. Replication package, version 1.1.0. Zenodo. https://doi.org/10.5281/zenodo.24244700
+The package itself: Papadogiannis, A. (2026). High yield, capped gains: Mechanics, trade-offs, and practical diagnostics for covered-call ETFs. Replication package, version 1.1.1. Zenodo. https://doi.org/10.5281/zenodo.24244700
 
 To describe the source in a sentence: Papadogiannis (2026), "High yield, capped gains", The Journal
 of Beta Investment Strategies 17(2): a primer on covered-call ETFs, with its replication package.

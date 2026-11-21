@@ -28,6 +28,9 @@ files = [
   "paper/abstract.pdf: the title and abstract of the article. The full text is at the publisher.",
 ]
 read = [
+  "For the maximum profit and the breakeven of a covered call use `exhibitA1_payoffs.panel_b` (stock bought at 100, strike 110, premium 5). `panel_a` is a single call, long and short, and its `breakeven` is the call's. `exhibit1_nav_profile` gives net asset value at expiration, not profit.",
+  "The ticker JEPI appears in both fund tables: the US fund in `exhibit5_us_funds` and the UCITS fund, a different fund, in `exhibit6_ucits_funds`. UCITS rows carry an ISIN. Fund names are in data/us_funds.csv and data/ucits_funds.csv.",
+  "The UCITS figures are dated by month only (November 2025), as the source gave them.",
   "`distribution_yield_pct` is a trailing yield on the stated date. It is not a return and says nothing about whether the distribution was earned.",
   "`tr_1y_nav_pct` is a one-year total return on net asset value, distributions reinvested, to the stated date.",
   "US figures are in USD. UCITS figures are in EUR for unhedged share classes that hold largely USD assets, so they include the move of the dollar against the euro over the year. The two tables are not comparable fund for fund.",
