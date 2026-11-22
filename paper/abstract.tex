@@ -2,9 +2,10 @@
 \usepackage[utf8]{inputenc}
 \DeclareTextCommandDefault{\textcopyright}{\textcircled{c}}
 \usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{array}
 \usepackage[hidelinks,pdftitle={High Yield, Capped Gains: Mechanics, Trade-Offs, and Practical Diagnostics for Covered-Call ETFs},pdfauthor={Agisilaos Papadogiannis}]{hyperref}
-\title{High Yield, Capped Gains: Mechanics, Trade-Offs, and Practical Diagnostics for Covered-Call ETFs}
-\author{Agisilaos Papadogiannis\thanks{Independent Researcher (PhD, MBA). Correspondence: apapadogiannis@gmail.com. ORCID: 0009-0002-7753-7052.}}
+\title{\vspace{-3.5em}High Yield, Capped Gains: Mechanics, Trade-Offs, and Practical Diagnostics for Covered-Call ETFs}
+\author{Agisilaos Papadogiannis\thanks{Independent Researcher (PhD, MBA). Correspondence: \href{mailto:apapadogiannis@gmail.com}{apapadogiannis@gmail.com}. ORCID: \href{https://orcid.org/0009-0002-7753-7052}{0009-0002-7753-7052}.}}
 \date{}
 \begin{document}
 \maketitle
@@ -12,24 +13,29 @@
 Covered-call exchange-traded funds (ETFs) convert part of equity upside into option-premium cash distributions by systematically writing call options against an equity portfolio. This article is a high-level primer and due-diligence guide for investors and allocators evaluating covered-call ETFs. We explain the mechanics with a payoff view and a mark-to-market net asset value (NAV) decomposition that helps interpret distribution yield and NAV dynamics in the presence of a short-call liability. We then summarize the dominant exposures and the market environments in which covered-call strategies tend to help or hurt. We contrast US products with European UCITS (Undertakings for Collective Investment in Transferable Securities) variants to show how design choices, including moneyness, reset cadence, listed options versus equity-linked note (ELN) implementation, and currency exposure, affect realized outcomes. The guidance is practical: treat covered-call ETFs as satellite complements, not core growth anchors. Evaluate them on total return and distribution sustainability rather than headline yield, and monitor return of capital (ROC) and implied volatility (IV).
 \end{abstract}
 
-\vspace{1.5em}
-\noindent\textbf{Published in.}\\
-\textit{The Journal of Beta Investment Strategies}, 17(2), Summer 2026, pp.\ 110--123.\\
-\url{https://doi.org/10.3905/jbis.2026.001}\\
-Please cite the published article.
+\vspace{0.8em}
+\noindent\rule{\textwidth}{0.4pt}
 
-\medskip
-\noindent\textbf{Code and data.}\\
-\url{https://github.com/apapadogiannis/covered-call-etfs}\\
-Archived at \url{https://doi.org/10.5281/zenodo.24244700}\\
-The package reproduces the payoff figures and the fund tables of the article.
-
-\medskip
-\noindent\textbf{Other papers, code and tools by the author.}\\
-\url{https://github.com/apapadogiannis}
-
-\medskip
-\noindent\textbf{Notice.}\\
-\copyright\ 2026 PMR. All rights reserved.\\
-This file is provided for informational purposes and includes the title and abstract only. Full text is not provided in accordance with the copyright agreement.
+\vspace{0.4em}
+{\small
+\renewcommand{\arraystretch}{1.15}
+\newcommand{\lnk}[2]{\href{#1}{\texttt{#2}}}
+\noindent\begin{tabular}{@{}>{\raggedright\arraybackslash\bfseries}p{0.24\textwidth}>{\raggedright\arraybackslash}p{0.73\textwidth}@{}}
+Published in &
+\textit{The Journal of Beta Investment Strategies}, 17(2), Summer 2026,\newline pp.\ 110--123, \lnk{https://doi.org/10.3905/jbis.2026.001}{doi.org/10.3905/jbis.2026.001}\newline
+Please cite the published article.\\\noalign{\vskip 0.75em}
+Live tool &
+Covered-Call Monitor, current figures for these funds:\newline
+\lnk{https://apapadogiannis.github.io/covered-call-monitor/}{apapadogiannis.github.io/covered-call-monitor}\newline
+A companion tool, separate from the article: returns beside an index fund, calls written and flows of US covered-call funds, rebuilt every quarter from SEC filings.\\\noalign{\vskip 0.75em}
+Code and data &
+\lnk{https://github.com/apapadogiannis/covered-call-etfs}{github.com/apapadogiannis/covered-call-etfs}\newline
+Archived at \lnk{https://doi.org/10.5281/zenodo.24244700}{doi.org/10.5281/zenodo.24244700}\newline
+The package reproduces the payoff figures and the fund tables of the article.\\\noalign{\vskip 0.75em}
+Also by the author &
+Other papers, code and tools: \lnk{https://github.com/apapadogiannis}{github.com/apapadogiannis}\\\noalign{\vskip 0.75em}
+Notice &
+\copyright\ 2026 PMR. All rights reserved. This file is provided for informational purposes and includes the title and abstract only. Full text is not provided in accordance with the copyright agreement.
+\end{tabular}
+}
 \end{document}
