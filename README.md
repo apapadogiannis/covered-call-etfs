@@ -1,6 +1,7 @@
 # High Yield, Capped Gains: Mechanics, Trade-Offs, and Practical Diagnostics for Covered-Call ETFs
 
 [![Zenodo](https://img.shields.io/badge/Zenodo-10.5281%2Fzenodo.24244700-007ec6)](https://doi.org/10.5281/zenodo.24244700)
+[![Article](https://img.shields.io/badge/JBIS-10.3905%2Fjbis.2026.001-1f4e79)](https://doi.org/10.3905/jbis.2026.001)
 [![SSRN](https://img.shields.io/badge/SSRN-10.2139%2Fssrn.5370897-1f4e79)](https://doi.org/10.2139/ssrn.5370897)
 [![replication](https://github.com/apapadogiannis/covered-call-etfs/actions/workflows/replicate.yml/badge.svg)](https://github.com/apapadogiannis/covered-call-etfs/actions/workflows/replicate.yml)
 
